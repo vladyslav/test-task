@@ -1,0 +1,45 @@
+.todo-items {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation-duration: 0.3s;
+
+  .todo-item {
+    display: flex;
+    align-items: center;
+
+    &-label {
+      padding: 10px;
+      border: 1px solid white;
+      margin-left: 12px;
+    }
+
+    &-edit {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-left: 12px;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .remove-btn {
+    cursor: pointer;
+    margin-left: 14px;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
