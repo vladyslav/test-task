@@ -1,0 +1,64 @@
+<!-- <mat-list-item>
+  <mat-divider *ngIf="index != 0"></mat-divider>
+  <mat-slide-toggle [checked]="!!todo.done" color="primary" (change)="complete()"> </mat-slide-toggle>
+
+  <div class="content-section">
+    <div *ngIf="!isEditing; else editing" [ngClass]="{ done: todo.done }" class="todo-item-label">
+      {{ todo.label }}
+    </div>
+
+    <ng-template #editing>
+      <input
+        matInput
+        [formControl]="labelControl"
+        (blur)="edit()"
+        (keyup.enter)="edit()"
+        (keyup.esc)="cancelEditing()"
+        type="text"
+        class="todo-item-edit"
+      />
+    </ng-template>
+  </div>
+  <div class="btn-section">
+    <button (click)="initEditing()" matTooltipPosition="above" mat-icon-button>
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <button (click)="delete()" matTooltipPosition="above" mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-list-item> -->
+
+
+
+<div class="todo-items">
+  <div class="todo-item">
+    <input type="checkbox" [checked]="todo.done" (change)="complete()" />
+
+    <div
+      *ngIf="!isEditing; else editing"
+      [ngClass]="{ completed: todo.done }"
+      (dblclick)="initEditing()"
+      class="todo-item-label"
+    >
+      {{ todo.label }}
+    </div>
+
+    <ng-template #editing>
+      <input
+        matInput
+        [formControl]="labelControl"
+        (blur)="edit()"
+        (keyup.enter)="edit()"
+        (keyup.esc)="cancelEditing()"
+        type="text"
+        class="todo-item-edit"
+        autofocus
+      />
+    </ng-template>
+  </div>
+  <button class="delete-btn" (click)="delete()" matTooltipPosition="above" mat-icon-button>
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>

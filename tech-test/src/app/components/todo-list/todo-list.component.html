@@ -1,7 +1,0 @@
-<input type="text"
-  class="todo-input"
-  placeholder="Todo label"
-  [(ngModel)]="todoTitle"
-  (keyup.enter)="addTodo()" />
-
-<app-todo-item *ngFor="let todo of todoService.todos" [todo]="todo"></app-todo-item>

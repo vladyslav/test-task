@@ -1,0 +1,18 @@
+<mat-card>
+  <h1>Todo List</h1>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Add new task"
+      type="text"
+      class="todo-input"
+      [(ngModel)]="todoTitle"
+      (keyup.enter)="createTodo()"
+    />
+  </mat-form-field>
+
+  <mat-list>
+    <app-todo-item *ngFor="let todo of todos$ | async" [todo]="todo"></app-todo-item>
+  </mat-list>
+</mat-card>

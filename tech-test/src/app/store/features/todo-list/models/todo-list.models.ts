@@ -3,6 +3,3 @@ export interface Todo {
   label: string;
   done: boolean;
 }
-
-// "description":  "Clean my dirty kitchen",
-// "category": "house",

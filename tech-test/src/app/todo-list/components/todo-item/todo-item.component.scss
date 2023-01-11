@@ -1,6 +1,7 @@
 .todo-items {
   margin-bottom: 12px;
   display: flex;
+  padding: 0;
   align-items: center;
   justify-content: space-between;
   animation-duration: 0.3s;
@@ -10,17 +11,16 @@
     align-items: center;
 
     &-label {
-      padding: 10px;
       border: 1px solid white;
       margin-left: 12px;
     }
 
     &-edit {
-      font-size: 24px;
+      font-size: 14px;
       color: #2c3e50;
       margin-left: 12px;
       width: 100%;
-      padding: 10px;
+      padding: 5px;
       border: 1px solid #ccc;
       font-family: 'Avenir', Helvetica, Arial, sans-serif;
 
@@ -30,16 +30,27 @@
     }
   }
 
-  .remove-btn {
+  .delete-btn {
     cursor: pointer;
     margin-left: 14px;
     &:hover {
       color: black;
     }
   }
-}
 
-.completed {
-  text-decoration: line-through;
-  color: grey;
+  mat-icon {
+    color: grey;
+    font-size: 20px;
+  }
+
+  .delete-btn {
+    margin: 0;
+    padding: 0;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    color: grey;
+    opacity: 0.5;
+  }
 }
